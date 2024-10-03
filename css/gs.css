@@ -21,12 +21,12 @@
     font: optional;
     font-family: "Ubuntu", sans-serif;
     text-align: center;
-    font-size: 109px;
+    font-size: 6vh;
 }
 
 .vlad{
-    width: 600px;
-    height: 600px;
+    width: 60%;
+    height: 30vh;
     position: relative;
     top: 30%;
     left: 20%;
@@ -40,14 +40,14 @@
 }
 
 .coins{
-    width: 600px;
-    height: 100px;
+    width: 30%;
+    height: 10vh;
     position: absolute;
-    top: 20%;
-    left: 20%;
+    top: 15%;
+    left: 35%;
     text-align: center;
     background-color: red;
-    font-size: 72px;
+    font-size: 5vh;
     color: #000;
 }
 
