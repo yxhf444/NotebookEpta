@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/gs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+
+<div class="main__screen">
+    <div class="name">VLAD COMBAT</div>
+    <div id="counter" class="coins"></div>
+    <button onclick="incrementCounter()" class="vlad"><img src="lvl1.jpg" alt="Люблю путина" class="vlad_1"></button>
+    <div class="main__menu"></div>
+    
+</div>
+
+<script>
+    const storedCount = parseInt(localStorage.getItem('count') || '0', 10);
+    let count = storedCount > 0 ? storedCount : 0;
+
+    let counter = document.getElementById('counter');
+
+    function incrementCounter() {
+        count++;
+        localStorage.setItem('count', count);
+        counter.innerHTML = count;
+    }
+
+        // Устанавливаем начальное значение счетчика в div
+    counter.innerHTML = count;
+</script>
+
+</body>
+</html>
