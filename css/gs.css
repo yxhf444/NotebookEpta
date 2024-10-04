@@ -41,6 +41,19 @@
     height: 100%;
 }
 
+.tap{
+    width: 80%;
+    height: 40vh;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    right: 20%;
+    background-color: none;
+    border-radius: 40px;
+    background-color: rgba(255, 0, 128, 0.1);
+    display: none;
+}
+
 .coins{
     width: 30%;
     height: 10vh;
