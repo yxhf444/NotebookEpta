@@ -16,25 +16,57 @@
 <div class="main__screen">
     <div class="name">VLAD KOMBAT</div>
     <div id="counter" class="coins"></div>
-    <button onclick="incrementCounter()" class="vlad"><img src="lvls/lvl2.png" alt="Люблю путина" class="vlad_1"></button>
+    <button onclick="incrementCounter(), Show(), changeImageSource()" class="vlad"><img src="lvls/lvl2.png" alt="Люблю путина" class="vlad_1" id="skin"></button>
+    <div class="tap"></div>
     <div class="main__menu"></div>
     
 </div>
 
+
 <script>
-    const storedCount = parseInt(localStorage.getItem('count') || '0', 10);
-    let count = storedCount > 0 ? storedCount : 0;
+    const storedCount = parseInt(localStorage.getItem('s1') || '0', 10);
+    let s1 = storedCount > 0 ? storedCount : 0;
 
     let counter = document.getElementById('counter');
 
     function incrementCounter() {
-        count++;
-        localStorage.setItem('count', count);
-        counter.innerHTML = count;
+        s1++;
+        localStorage.setItem('s1', s1);
+        counter.innerHTML = s1;
+    }
+
+    function Show(){
+    const elementToShow = document.querySelector('.tap');
+        function displayToggle(element) {
+            if (element.style.display === 'none') {
+                element.style.display = 'block';
+                setTimeout(() => {
+                    element.style.display = 'none';
+                }, 100);
+            } else {
+                element.style.display = 'none';
+            }
+        }
+        
+        displayToggle(elementToShow);
+    }
+
+    let currentSrc = 'lvls/lvl1.png';
+
+    function changeImageSource() {
+        if (s1 > 500) {
+            const imageElement = document.getElementById('skin');
+            currentSrc = 'lvls/lvl2.png';
+            imageElement.src = currentSrc;}
+        
+        if (s1 > 1000){
+            const imageElement = document.getElementById('skin');
+            currentSrc = 'lvls/lvl3.png';
+            imageElement.src = currentSrc;}
     }
 
         // Устанавливаем начальное значение счетчика в div
-    counter.innerHTML = count;
+    counter.innerHTML = s1;
 </script>
 
 </body>
